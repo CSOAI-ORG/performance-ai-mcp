@@ -1,0 +1,23 @@
+{
+  "name": "performance-ai-mcp",
+  "description": "MEOK AI Labs \u2014 Web performance analysis and optimization tools powered by MEOK AI Labs.",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/performance-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "analyze_waterfall_data",
+    "suggest_optimizations",
+    "calculate_core_web_vitals",
+    "image_optimization_hints"
+  ],
+  "categories": [
+    "DevOps",
+    "Performance"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
