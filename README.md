@@ -1,24 +1,64 @@
-# Performance AI MCP Server
+# Performance Ai
 
-Resource waterfall analysis, optimization suggestions, Core Web Vitals, and image optimization.
+> By [MEOK AI Labs](https://meok.ai) — MEOK AI Labs MCP Server
+
+Performance AI MCP Server
+
+## Installation
+
+```bash
+pip install performance-ai-mcp
+```
+
+## Usage
+
+```bash
+# Run standalone
+python server.py
+
+# Or via MCP
+mcp install performance-ai-mcp
+```
 
 ## Tools
 
-- **analyze_waterfall_data**
-- **suggest_optimizations**
-- **calculate_core_web_vitals**
-- **image_optimization_hints**
+### `analyze_waterfall_data`
+Analyze a resource loading waterfall for performance bottlenecks.
 
-## Quick Start
+**Parameters:**
+- `resources` (str)
 
-```bash
-pip install mcp
-python server.py
-```
+### `suggest_optimizations`
+Suggest performance optimizations based on page characteristics.
 
-## Rate Limits
+**Parameters:**
+- `page_data` (str)
 
-- Free tier: 50 calls/day per tool
-- Upgrade: https://meok.ai/pricing
+### `calculate_core_web_vitals`
+Calculate and rate Core Web Vitals scores.
 
-Built by [MEOK AI Labs](https://meok.ai)
+**Parameters:**
+- `lcp_ms` (float)
+- `fid_ms` (float)
+- `inp_ms` (float)
+
+### `image_optimization_hints`
+Analyze images and suggest optimization strategies.
+
+**Parameters:**
+- `images` (str)
+
+
+## Authentication
+
+Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+
+## Links
+
+- **Website**: [meok.ai](https://meok.ai)
+- **GitHub**: [CSOAI-ORG/performance-ai-mcp](https://github.com/CSOAI-ORG/performance-ai-mcp)
+- **PyPI**: [pypi.org/project/performance-ai-mcp](https://pypi.org/project/performance-ai-mcp/)
+
+## License
+
+MIT — MEOK AI Labs
