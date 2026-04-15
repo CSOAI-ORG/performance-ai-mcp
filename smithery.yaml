@@ -1,6 +1,5 @@
 name: performance-ai-mcp
-description: Resource waterfall analysis, optimization suggestions, Core Web Vitals,
-  and image optimization.
+description: MEOK AI Labs MCP Server
 version: 1.0.0
 tools:
 - name: analyze_waterfall_data
@@ -22,9 +21,6 @@ tools:
     type: number
     required: true
   - name: fid_ms
-    type: number
-    required: true
-  - name: cls
     type: number
     required: true
   - name: inp_ms

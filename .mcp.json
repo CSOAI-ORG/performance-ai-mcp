@@ -1,6 +1,6 @@
 {
   "name": "performance-ai-mcp",
-  "description": "Resource waterfall analysis, optimization suggestions, Core Web Vitals, and image optimization.",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for everyone.",
   "version": "1.0.0",
   "tools": [
     {
@@ -10,10 +10,7 @@
         "type": "object",
         "properties": {
           "resources": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           }
         },
         "required": [
@@ -48,17 +45,13 @@
           "fid_ms": {
             "type": "number"
           },
-          "cls": {
-            "type": "number"
-          },
           "inp_ms": {
             "type": "number"
           }
         },
         "required": [
           "lcp_ms",
-          "fid_ms",
-          "cls"
+          "fid_ms"
         ]
       }
     },
@@ -69,10 +62,7 @@
         "type": "object",
         "properties": {
           "images": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           }
         },
         "required": [
