@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 [project]
 name = "performance-ai-mcp"
 version = "1.0.0"
-description = "MEOK AI Labs — performance-ai-mcp"
+description = "Performance Ai automation via MCP. Includes analyze waterfall data, suggest optimizations, calculate core web vitals. By MEOK AI Labs."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]

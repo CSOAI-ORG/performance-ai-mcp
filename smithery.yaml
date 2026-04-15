@@ -1,5 +1,6 @@
 name: performance-ai-mcp
-description: MEOK AI Labs MCP Server
+description: Performance Ai automation via MCP. Includes analyze waterfall data, suggest
+  optimizations, calculate core web vitals. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: analyze_waterfall_data
