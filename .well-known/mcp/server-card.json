@@ -1,0 +1,52 @@
+{
+  "name": "performance-ai",
+  "description": "Performance Ai tools powered by MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/performance-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "analyze_waterfall_data",
+      "description": "Analyze a resource loading waterfall for performance bottlenecks."
+    },
+    {
+      "name": "suggest_optimizations",
+      "description": "Suggest performance optimizations based on page characteristics."
+    },
+    {
+      "name": "calculate_core_web_vitals",
+      "description": "Calculate and rate Core Web Vitals scores."
+    },
+    {
+      "name": "image_optimization_hints",
+      "description": "Analyze images and suggest optimization strategies."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
