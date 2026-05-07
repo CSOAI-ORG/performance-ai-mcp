@@ -39,6 +39,21 @@ def analyze_waterfall_data(resources: list[dict], api_key: str = "") -> dict:
 
     Args:
         resources: List of resource dicts with keys: url, type (js/css/img/font/html/other), size_kb, start_ms, duration_ms, blocking (bool, optional)
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -82,6 +97,21 @@ def suggest_optimizations(page_data: dict, api_key: str = "") -> dict:
 
     Args:
         page_data: Dict with optional keys: total_size_kb, js_count, css_count, image_count, font_count, uses_http2 (bool), has_service_worker (bool), has_lazy_loading (bool), ttfb_ms, lcp_ms, cls, fid_ms
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -133,6 +163,21 @@ def calculate_core_web_vitals(lcp_ms: float, fid_ms: float, cls: float, inp_ms: 
         fid_ms: First Input Delay in milliseconds
         cls: Cumulative Layout Shift score
         inp_ms: Interaction to Next Paint in ms (optional, new metric)
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -169,6 +214,21 @@ def image_optimization_hints(images: list[dict], api_key: str = "") -> dict:
 
     Args:
         images: List of image dicts with keys: url (or name), format (jpg/png/gif/webp/svg), size_kb, width, height, above_fold (bool, optional)
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
