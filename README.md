@@ -1,45 +1,59 @@
-[![performance-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/performance-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/performance-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/performance-ai-mcp)](https://pypi.org/project/performance-ai-mcp/)
-
-[![performance-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/performance-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/performance-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/performance-ai-mcp)](https://github.com/CSOAI-ORG/performance-ai-mcp/stargazers)
-
-# uperformanceU aiU mcp
+# Performance Ai MCP
 
 **Performance AI MCP Server**
 
-[![npm version](https://img.shields.io/npm/v/@meok-ai/performance-ai-mcp)](https://www.npmjs.com/package/@meok-ai/performance-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-performance-ai-mcp)](https://pypi.org/project/meok-performance-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/performance-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Performance AI MCP Server
+Web performance analysis and optimization tools powered by MEOK AI Labs.
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `analyze_waterfall_data` | Analyze a resource loading waterfall for performance bottlenecks. |
+| `suggest_optimizations` | Suggest performance optimizations based on page characteristics. |
+| `calculate_core_web_vitals` | Calculate and rate Core Web Vitals scores. |
+| `image_optimization_hints` | Analyze images and suggest optimization strategies. |
 
 ## Installation
 
 ```bash
-pip install performance-ai-mcp
-# or
-npm install -g @meok-ai/performance-ai-mcp
+pip install meok-performance-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "performance-ai": {
+      "command": "python",
+      "args": ["-m", "meok_performance_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 4 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/performance-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
