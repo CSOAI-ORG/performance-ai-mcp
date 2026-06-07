@@ -5,7 +5,6 @@ Web performance analysis and optimization tools powered by MEOK AI Labs.
 
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import time
@@ -23,7 +22,7 @@ def _check_rate_limit(tool_name: str) -> None:
     now = time.time()
     _call_counts[tool_name] = [t for t in _call_counts[tool_name] if now - t < WINDOW]
     if len(_call_counts[tool_name]) >= FREE_TIER_LIMIT:
-        raise ValueError(f"Rate limit exceeded for {tool_name}. Free tier: {FREE_TIER_LIMIT}/day. Upgrade at https://meok.ai/pricing")
+        raise ValueError(f"Rate limit exceeded for {tool_name}. Free tier: {FREE_TIER_LIMIT}/day. Upgrade at https://councilof.ai")
     _call_counts[tool_name].append(now)
 
 
@@ -71,7 +70,7 @@ def analyze_waterfall_data(resources: list[dict], api_key: str = "") -> dict:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     _check_rate_limit("analyze_waterfall_data")
     if not resources:
@@ -143,7 +142,7 @@ def suggest_optimizations(page_data: dict, api_key: str = "") -> dict:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     _check_rate_limit("suggest_optimizations")
     suggestions = []
@@ -223,7 +222,7 @@ def calculate_core_web_vitals(lcp_ms: float, fid_ms: float, cls: float, inp_ms: 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     _check_rate_limit("calculate_core_web_vitals")
     lcp_rating = _rate_metric(lcp_ms, 2500, 4000)
@@ -288,7 +287,7 @@ def image_optimization_hints(images: list[dict], api_key: str = "") -> dict:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     _check_rate_limit("image_optimization_hints")
     hints = []
@@ -325,5 +324,8 @@ def image_optimization_hints(images: list[dict], api_key: str = "") -> dict:
             "hints": hints}
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

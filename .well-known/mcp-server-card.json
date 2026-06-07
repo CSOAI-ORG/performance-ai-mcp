@@ -1,0 +1,25 @@
+{
+  "name": "performance-ai-mcp",
+  "title": "Performance Ai Mcp",
+  "description": "Performance Ai automation via MCP. Includes analyze waterfall data, suggest optimizations, calculate core web vitals. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "analyze_waterfall_data"
+    },
+    {
+      "name": "suggest_optimizations"
+    },
+    {
+      "name": "calculate_core_web_vitals"
+    },
+    {
+      "name": "image_optimization_hints"
+    }
+  ]
+}
