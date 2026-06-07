@@ -1,0 +1,59 @@
+{
+  "name": "performance-ai-mcp",
+  "description": "Performance Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/performance-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "analyze_waterfall_data",
+      "name": "Analyze Waterfall Data",
+      "description": "analyze_waterfall_data via performance-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "suggest_optimizations",
+      "name": "Suggest Optimizations",
+      "description": "suggest_optimizations via performance-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "calculate_core_web_vitals",
+      "name": "Calculate Core Web Vitals",
+      "description": "calculate_core_web_vitals via performance-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "image_optimization_hints",
+      "name": "Image Optimization Hints",
+      "description": "image_optimization_hints via performance-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

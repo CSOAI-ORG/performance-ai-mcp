@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "performance-ai-mcp",
+    "description": "Performance Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "performance-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "analyze_waterfall_data",
+      "suggest_optimizations",
+      "calculate_core_web_vitals",
+      "image_optimization_hints"
+    ]
+  }
+}
