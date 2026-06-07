@@ -1,0 +1,31 @@
+# Performance Ai MCP
+
+> MEOK AI Labs MCP Server
+
+`performance-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+
+## Install
+
+```bash
+pip install performance-ai-mcp
+```
+
+Or run without installing:
+
+```bash
+uvx performance-ai-mcp
+```
+
+## Tools
+
+- `analyze_waterfall_data` — Analyze a resource loading waterfall for performance bottlenecks.
+- `suggest_optimizations` — Suggest performance optimizations based on page characteristics.
+- `calculate_core_web_vitals` — Calculate and rate Core Web Vitals scores.
+- `image_optimization_hints` — Analyze images and suggest optimization strategies.
+
+## Links
+
+- Source: https://github.com/CSOAI-ORG/performance-ai-mcp
+- PyPI: https://pypi.org/project/performance-ai-mcp/
+- MEOK AI Labs: https://meok.ai
+- Council of AI: https://councilof.ai
