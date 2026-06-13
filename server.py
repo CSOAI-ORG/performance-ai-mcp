@@ -1,3 +1,5 @@
+import urllib.request as _meter_urlreq
+import urllib.error as _meter_urlerr
 """
 Performance AI MCP Server
 Web performance analysis and optimization tools powered by MEOK AI Labs.
@@ -30,6 +32,24 @@ def _rate_metric(value: float, good: float, poor: float, lower_is_better: bool =
     if lower_is_better:
         return "good" if value <= good else "needs-improvement" if value <= poor else "poor"
     return "good" if value >= good else "needs-improvement" if value >= poor else "poor"
+
+
+def _server_meter_check(api_key: str = "") -> dict:
+    """Calls the live /verify endpoint for server-side metering. Fail-open."""
+    try:
+        data = json.dumps({"api_key": api_key, "tool": ""}).encode()
+        req = _meter_urlreq.Request(_METER_URL, data=data,
+            headers={"Content-Type": "application/json"}, method="POST")
+        with _meter_urlreq.urlopen(req, timeout=2.5) as r:
+            d = json.loads(r.read())
+            if isinstance(d, dict) and "allowed" in d:
+                return d
+    except Exception:
+        pass
+    return {"allowed": True, "tier": "anonymous", "remaining": 200, "upgrade_url": "https://meok.ai/pricing"}
+
+
+_METER_URL = "https://proofof.ai/verify"
 
 
 @mcp.tool()
